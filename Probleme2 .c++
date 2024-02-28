@@ -6,11 +6,11 @@ int main()
   // Problem Two in sheet
   double Num1, Num2;
   string symbol;
-  bool onther;
+  bool continueOperation;
   cout << "Are you want to do onther operation or not write 1 or 0\n";
-  cin >> onther;
+  cin >> continueOperation;
 
-  while (onther == true)
+  while (continueOperation)
   {
     cout << "please enter first number\n";
     cin >> Num1;
@@ -38,9 +38,16 @@ int main()
     }
     else if (symbol == "%")
     {
-      cout << static_cast<int>(Num1) << " % " << static_cast<int>(Num2) << " = " << static_cast<int>(Num1) % static_cast<int>(Num2) << endl;
+      if (Num2 != 0)
+        cout << static_cast<int>(Num1) << " % " << static_cast<int>(Num2) << " = " << static_cast<int>(Num1) % static_cast<int>(Num2) << endl;
     }
-    cout << "Are you want to do onther operation or not (write 1 or 0)\n";
-    cin >> onther;
+    else
+    {
+      cout << "Error: Division by zero is not allowed." << endl;
+    }
+    cout << "Enter 1 for Yes, 0 for No.\n";
+    cin >> continueOperation;
   }
+  cout << "Exiting program. Goodbye!" << endl;
+  return 0;
 }
