@@ -13,4 +13,6 @@ int main()
   cin >> lastName;
 
   cout << "Hi, " << firstName << " " << lastName;
+
+  return 0;
 }

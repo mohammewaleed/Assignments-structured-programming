@@ -22,4 +22,6 @@ int main()
 
   cout << "Geometric Mean: " << sqrt(number1 * number2) << endl;
   cout << "Harmonic Mean: " << Harmonic_Mean << endl;
+
+  return 0;
 }
